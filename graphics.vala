@@ -38,7 +38,7 @@ public static void initialize_rgb_data(RGB[] rgb_data, uint8 red, uint8 green, u
 public static void copy_rgb_data_to_image_data(uint8[] image_data, RGB[] rgb_data, int settings_length)
 {
     int i = settings_length;
-    for(i = i; i < image_data.length; i += RGB_SIZE)
+    for(; i < image_data.length; i += RGB_SIZE)
     {
         image_data[i] = rgb_data[(i-settings_length)/(int)(RGB_SIZE)].red;
         image_data[i+1] = rgb_data[(i-settings_length)/(int)(RGB_SIZE)].green;
